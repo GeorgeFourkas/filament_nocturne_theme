@@ -1,30 +1,28 @@
 {
-    "name": ":vendor_slug/:package_slug",
-    "description": ":package_description",
+    "name": "nalcom/filament-nocturne-theme",
+    "description": "This is my package filament-nocturne-theme",
     "keywords": [
-        ":vendor_name",
+        "nalcom",
         "laravel",
         "filamentphp",
-        ":package_slug"
+        "filament-nocturne-theme"
     ],
-    "homepage": "https://github.com/:vendor_slug/:package_slug",
+    "homepage": "https://github.com/nalcom/filament-nocturne-theme",
     "support": {
-        "issues": "https://github.com/:vendor_slug/:package_slug/issues",
-        "source": "https://github.com/:vendor_slug/:package_slug"
+        "issues": "https://github.com/nalcom/filament-nocturne-theme/issues",
+        "source": "https://github.com/nalcom/filament-nocturne-theme"
     },
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
+            "name": "Nalcom",
+            "email": "info@nalcom.gr",
             "role": "Developer"
         }
     ],
     "require": {
         "php": "^8.2",
         "filament/filament": "^4.0",
-        "filament/forms": "^4.0",
-        "filament/tables": "^4.0",
         "spatie/laravel-package-tools": "^1.15.0"
     },
     "require-dev": {
@@ -38,37 +36,33 @@
         "pestphp/pest-plugin-livewire": "^3.0",
         "phpstan/extension-installer": "^1.1",
         "phpstan/phpstan-deprecation-rules": "^2.0",
-        "phpstan/phpstan-phpunit": "^2.0",
-        "rector/rector": "^2.0",
-        "spatie/laravel-ray": "^1.26"
+        "phpstan/phpstan-phpunit": "^2.0"
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src/",
-            "VendorName\\Skeleton\\Database\\Factories\\": "database/factories/"
+            "Nalcom\\FilamentNocturneTheme\\": "src/",
+            "Nalcom\\FilamentNocturneTheme\\Database\\Factories\\": "database/factories/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests/"
+            "Nalcom\\FilamentNocturneTheme\\Tests\\": "tests/"
         }
     },
     "scripts": {
         "post-autoload-dump": "@php ./vendor/bin/testbench package:discover --ansi",
         "analyse": "phpstan analyse",
         "lint": "pint",
-        "refactor": "rector",
         "test": "pest",
-        "test:lint": "pint --test",
-        "test:refactor": "rector --dry-run"
+        "test:lint": "pint --test"
     },
     "extra": {
         "laravel": {
             "providers": [
-                "VendorName\\Skeleton\\SkeletonServiceProvider"
+                "Nalcom\\FilamentNocturneTheme\\FilamentNocturneThemeServiceProvider"
             ],
             "aliases": {
-                "Skeleton": "VendorName\\Skeleton\\Facades\\Skeleton"
+                "FilamentNocturneTheme": "Nalcom\\FilamentNocturneTheme\\Facades\\FilamentNocturneTheme"
             }
         }
     },
