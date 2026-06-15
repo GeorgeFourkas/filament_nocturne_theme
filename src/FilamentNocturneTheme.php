@@ -38,6 +38,10 @@ class FilamentNocturneTheme implements Plugin
             )
             ->breadcrumbs(false)
             ->maxContentWidth('full');
+
+        if ($panel->hasTopNavigation()) {
+            throw new \Exception('Top navigation is not supported on nocturne theme...');
+        }
     }
 
     private function primaryColorStyles(): string
