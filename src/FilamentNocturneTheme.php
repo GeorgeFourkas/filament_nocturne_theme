@@ -25,15 +25,7 @@ class FilamentNocturneTheme implements Plugin
     {
         FilamentAsset::register([
             Theme::make('filament-nocturne-theme', __DIR__ . '/../resources/dist/filament-nocturne-theme.css'),
-        ]);
-
-        //            ->font('DM Sans')
-        //            ->primaryColor(Color::Amber)
-        //            ->secondaryColor(Color::Gray)
-        //            ->warningColor(Color::Amber)
-        //            ->dangerColor(Color::Rose)
-        //            ->successColor(Color::Green)
-        //            ->grayColor(Color::Gray)
+        ], 'nalcom/filament-nocturne-theme');
 
         $panel
             ->theme('filament-nocturne-theme')
@@ -49,10 +41,6 @@ class FilamentNocturneTheme implements Plugin
             ->maxContentWidth('full');
     }
 
-    public function boot(Panel $panel): void
-    {
-        //
-    }
 
     private function primaryColorStyles(): string
     {
@@ -72,5 +60,15 @@ class FilamentNocturneTheme implements Plugin
                 }
             </style>
         HTML;
+    }
+
+    public function boot(Panel $panel): void
+    {
+        // TODO: Implement boot() method.
+    }
+
+    public static function make(): static
+    {
+        return app(static::class);
     }
 }
