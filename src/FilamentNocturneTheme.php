@@ -5,7 +5,6 @@ namespace Nalcom\FilamentNocturneTheme;
 use Filament\Contracts\Plugin;
 use Filament\Panel;
 use Filament\Support\Assets\Theme;
-use Filament\Support\Color;
 use Filament\Support\Facades\FilamentAsset;
 
 class FilamentNocturneTheme implements Plugin
@@ -40,7 +39,6 @@ class FilamentNocturneTheme implements Plugin
             ->breadcrumbs(false)
             ->maxContentWidth('full');
     }
-
 
     private function primaryColorStyles(): string
     {
