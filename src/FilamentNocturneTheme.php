@@ -28,10 +28,10 @@ class FilamentNocturneTheme implements Plugin
 
         $panel
             ->theme('filament-nocturne-theme')
-            ->renderHook(
-                'panels::sidebar.footer',
-                fn (): string => view('')->render(),
-            )
+//            ->renderHook(
+//                'panels::sidebar.footer',
+//                fn (): string => view('')->render(),
+//            )
             ->renderHook(
                 'panels::head.end',
                 fn (): string => $this->primaryColorStyles(),
